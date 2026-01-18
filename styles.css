@@ -1,0 +1,260 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f6f6f6;
+  color: #222;
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Fontes principais */
+h1, h2 {
+  font-family: 'Luckiest Guy', cursive;
+  color: #23272a;
+}
+
+/* HEADER - HERO */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 520px; /* altura próxima do modelo */
+  
+  /* Background com a imagem da pasta img */
+  background-image: url('img/background.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  background-color: #5865F2; /* fallback */
+
+  /* Layout flex para centralizar conteúdo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+
+  padding: 4rem 1rem 6rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Título principal */
+.hero h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+/* Subtítulo */
+.hero .subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.125rem;
+  opacity: 0.9;
+  margin-bottom: 3rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+/* Botões lado a lado com espaçamento */
+.btn-group {
+  display: inline-flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-shrink: 0;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn-white,
+.btn-black {
+  white-space: nowrap; /* evita quebra de linha no texto */
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  transition: background-color 0.3s ease;
+  min-width: 160px;
+  text-align: center;
+  text-decoration: none;
+  flex: none; /* opcional: evita que os botões se estiquem */
+}
+
+/* Ajuste específico dos botões */
+
+.btn-white {
+  background-color: white;
+  color: #23272a;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+}
+
+.btn-white:hover,
+.btn-white:focus {
+  background-color: #dde2ff;
+}
+
+.btn-black {
+  background-color: #23272a;
+  color: white;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.2);
+}
+
+.btn-black:hover,
+.btn-black:focus {
+  background-color: #4752c4;
+}
+
+/* MAIN CONTENT BLOCKS */
+
+.content-block {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin: 4rem 0;
+  flex-wrap: wrap;
+}
+
+.content-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.image-block img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-block {
+  flex: 1 1 400px;
+  max-width: 540px;
+}
+
+.text-block h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #23272a;
+}
+
+.text-block p {
+  font-size: 1rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+/* TECHNOLOGY CONNECTION SECTION */
+
+.connection {
+  background-color: #f9fafb;
+  padding: 4rem 1rem 6rem;
+  text-align: center;
+}
+
+.connection-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.connection h2 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #23272a;
+  letter-spacing: 0.04em;
+}
+
+.connection-text {
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.connection-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgb(0 0 0 / 0.12);
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #23272a;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 150px;
+  user-select: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .content-block {
+    flex-direction: column !important;
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .text-block {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .connection h2 {
+    font-size: 1.6rem;
+  }
+}
